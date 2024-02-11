@@ -50,6 +50,12 @@ declare namespace Mithril {
             ...args: Children[]
         ): Vnode<Attrs, State>;
         /** Creates a virtual element (Vnode). */
+        <Attrs>(
+            component: FactoryComponent<Attrs> | ClassComponent<Attrs>,
+            attributes: Attrs & CommonAttributes<Attrs>,
+            ...args: Children[]
+        ): Vnode<Attrs>;
+        /** Creates a virtual element (Vnode). */
         (selector: string, attributes: Attributes, ...children: Children[]): Vnode<any, any>;
         /** Creates a virtual element (Vnode). */
         <Attrs, State>(component: ComponentTypes<Attrs, State>, ...args: Children[]): Vnode<Attrs, State>;
